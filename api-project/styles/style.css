@@ -1,0 +1,79 @@
+html,
+body,
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+:root {
+  --black: #000;
+  --light-yellow: #fff9a1;
+  --dark-yellow: #fdea80;
+  --light-red: #f87171;
+  --dark-red: #ee4d4d;
+  --white: #ffffff;
+  --lighter-red: #fc8f8f;
+  --darker-red: #f02a2a;
+
+
+  /*Typography */
+  --h1: 7.594rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+
+.warm {
+  --primary: var(--light-red);
+  --secondary: var(--dark-red);
+  --primaryaccent: var(--light-yellow);
+  --secondaryaccent: var(--dark-yellow);
+  /* --buttonBacc: var(--) */
+}
+
+.cool {
+  --primary: var(--light-yellow);
+  --secondary: var(--dark-yellow);
+  --primaryaccent: var(--light-red);
+  --secondaryaccent: var(--dark-red);
+}
+
+h1 {
+  font-size: var(--h1);
+  color: var(--secondaryaccent);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: center;
+  background-color: transparent;
+}
+
+.yo{
+  background-color: #0d5ca7;
+}
