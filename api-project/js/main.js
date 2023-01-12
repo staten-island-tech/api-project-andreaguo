@@ -25,18 +25,25 @@ import '../styles/style.css';
 //         console.log(result);       
 //     });
 
-const URL = "https://rickandmortyapi.com/api/character";
+const URL = "https://rickandmortyapi.com/api/character/";
 
 async function getData(URL){
     try {
         const response = await fetch(URL);
         const data = await response.json();
+        const array = data.array
         console.log(data);
         document.getElementById("cold").textContent = data.results[0].gender;
+        hug();
     } catch (error) {
         console.log(error);
     }
     
+}
+
+function hug(){
+
+
 }
 
 getData(URL);
