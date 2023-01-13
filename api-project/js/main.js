@@ -31,19 +31,16 @@ async function getData(URL){
     try {
         const response = await fetch(URL);
         const data = await response.json();
-        const array = data.array
-        console.log(data);
-        document.getElementById("cold").textContent = data.results[0].gender;
-        hug();
+        const array = await data.results;
+        console.log(array);
+        document.getElementById("cold").textContent = array[0].name;        
     } catch (error) {
         console.log(error);
     }
     
 }
-
-function hug(){
-
-
+function good(){
+    array.foreach((el)=>console.log(el.name))
 }
 
 getData(URL);
