@@ -30,17 +30,22 @@ const URL = "https://rickandmortyapi.com/api/character/";
 async function getData(URL){
     try {
         const response = await fetch(URL);
-        const data = await response.json();
-        const array = await data.results;
-        console.log(array);
-        document.getElementById("cold").textContent = array[0].name;        
+        if (response.status < 200  || response.status >299) {
+            console.log(response.status);
+            throw error(response);
+        } else {
+            const data = await response.json();
+            const array =  data.results;
+            console.log(array);
+            console.log(data);
+            array.forEach((el)=> document.getElementById("cold").insertAdjacentHTML(
+                "afterbegin",
+                `<p>${el.name}</p>`
+             )) 
+        }    
     } catch (error) {
         console.log(error);
     }
     
 }
-function good(){
-    array.foreach((el)=>console.log(el.name))
-}
-
 getData(URL);
