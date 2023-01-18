@@ -35,17 +35,23 @@ async function getData(URL){
             throw error(response);
         } else {
             const data = await response.json();
-            const array =  data.results;
-            console.log(array);
-            console.log(data);
-            array.forEach((el)=> document.getElementById("cold").insertAdjacentHTML(
-                "afterbegin",
-                `<p>${el.name}</p>`
-             )) 
+            cards(data);
         }    
     } catch (error) {
         console.log(error);
     }
-    
 }
+
+function cards(data){
+    const array =  data.results;
+        console.log(array);
+        console.log(data);
+        array.forEach((el)=> document.getElementById("cold").insertAdjacentHTML(
+            "afterbegin",
+            `<div class="character">
+            <p>${el.name}</p>
+            </div>`
+        )) 
+}
+
 getData(URL);
