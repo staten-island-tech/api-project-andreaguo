@@ -8,6 +8,7 @@ body,
   color: var(--primary);
   background-color: var(--secondary);
   font-family: 'Creepster', cursive;
+  z zz
 }
 
 :root {
@@ -76,7 +77,7 @@ h5 {
 
 .yo {
   color: black;
-  background-color: #0d5ca7;
+  background-color: #00305e;
   text-align: center;
   font-size: 25vh;
 }
