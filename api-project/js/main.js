@@ -50,6 +50,7 @@ function cards(data){
             "afterbegin",
             `<div class="character">
             <p>${el.name}</p>
+            <img src=${el.image} alt="">
             </div>`
         )) 
 }

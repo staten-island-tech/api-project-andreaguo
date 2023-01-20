@@ -76,17 +76,18 @@ h5 {
 }
 
 .yo {
-  color: black;
+  color: white;
   background-color: #00305e;
   text-align: center;
   font-size: 25vh;
+  padding-top: 15vh;
 }
 
 .character {
   margin: 2rem;
   height: 70vh;
   width: 30vw;
-  background-color: #a4d3ff;
+  background-color: rgba(#a4d3ff, 0, 0, .5);
 }
 
 #cold {
@@ -95,4 +96,12 @@ h5 {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 40vh;
+}
+
+.section {
+  background-color: #a4d3ff;
+  color: black;
+  margin-top: 30vh;
+  height: 60vh;
 }
