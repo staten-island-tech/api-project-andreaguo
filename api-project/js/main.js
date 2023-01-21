@@ -48,11 +48,22 @@ function cards(data){
         console.log(data);
         array.forEach((el)=> document.getElementById("cold").insertAdjacentHTML(
             "afterbegin",
-            `<div class="character">
-            <p>${el.name}</p>
-            <img src=${el.image} alt="">
-            </div>`
+            `<div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h3>${el.name}</h3>
+                <img src=${el.image} alt="">
+            </div>
+            <div class="flip-card-back">
+                <h3>${el.name}</h3>
+                <h3>${el.gender}</h3> 
+                <h3>${el.origin.name}</h3>
+            </div>
+            </div>
+            </div>
+        </div>`
         )) 
 }
+
 
 getData(URL);
