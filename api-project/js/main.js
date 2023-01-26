@@ -24,6 +24,9 @@ import '../styles/style.css';
 //     suzie.then((result)=>{   // shows the result/product
 //         console.log(result);       
 //     });
+
+import { cardFunctions, buttonFunctions } from "./functions.js";
+
 const DOMSelectors={
     home: document.querySelector(".home"),
     male: document.querySelector(".male"),
@@ -44,60 +47,26 @@ async function getData(URL){
         } else {
             const data = await response.json();
             const array =  data.results;
-            const malefilter = filterGender(array, "male");
-            const array1 = Array.from(malefilter);
             cards(array);
             homeBTN(array);
-            maleBTN(array1);
+            buttonG(DOMSelectors.male, array, "Male");
+            buttonG(DOMSelectors.female, array, "Female");
+            buttonS(DOMSelectors.human, array, "Human");
+            buttonS(DOMSelectors.alien, array, "Alien");
         }    
     } catch (error) {
         console.log(error);
     }
 }
 
-function cards(array){
-        console.log(array);
-        array.forEach((el)=> document.getElementById("cold").insertAdjacentHTML(
-            "afterbegin",
-            `<div class="flip-card">
-            <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <h3>${el.name}</h3>
-                <img src=${el.image} alt="">
-            </div>
-            <div class="flip-card-back">
-                <h3>${el.name}</h3>
-                <h3>${el.gender}</h3> 
-                <h3>${el.origin.name}</h3>
-            </div>
-            </div>
-            </div>
-        </div>`
-        )) 
-}
-
-function homeBTN(array){
-    DOMSelectors.home.addEventListener("click", function(){
-    document.querySelectorAll(".flip-card").forEach((e)=> e.remove());
-    cards(array);         
-})
-}
-//you only need one of the functions that allows any filter/button
-//that you want to press to filter through that when you pass that
-//specific property in through the paraeter
-// ie:
-// function button(home, array1)
-//const array1 = Array.from() <-- this will map a new array specific to each filter
-
-function maleBTN(array1){
-    DOMSelectors.male.addEventListener("click", function(){
-    document.querySelectorAll(".flip-card").forEach((e)=> e.remove()); 
-    cards(array1);
-    })
-}
-
-function filterGender(array, type){
-    return array.filter((el)=> el.gender === `${type}`)
-}
-
 getData(URL);
+
+document.querySelector(".color").addEventListener("click", function () {
+    if (document.body.classList.contains("cool")) {
+      document.body.classList.add("warm");
+      document.body.classList.remove("cool");
+    } else {
+      document.body.classList.add("cool");
+      document.body.classList.remove("warm");
+    }
+});
