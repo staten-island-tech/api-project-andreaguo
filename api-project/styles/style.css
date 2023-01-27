@@ -186,3 +186,17 @@ h5 {
   justify-items: center;
   transform: rotateY(180deg);
 }
+
+@media all and (max-width: 820px) {
+  /* iPad Air*/
+  .tabs{
+    width: 100vw;
+  }
+}
+
+@media all and (max-width: 480) {
+  /* iPphone 12 Pro*/
+  .tabs{
+    font-size: 50%;
+  }
+}
