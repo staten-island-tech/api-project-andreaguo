@@ -5,21 +5,18 @@ body,
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  color: var(--primary);
+  color: var(--accent);
   background-color: var(--secondary);
   font-family: 'Creepster', cursive;
 }
 
 :root {
   --black: #000;
-  --light-yellow: #fff9a1;
-  --dark-yellow: #fdea80;
-  --light-red: #f87171;
-  --dark-red: #ee4d4d;
   --white: #ffffff;
-  --lighter-red: #fc8f8f;
-  --darker-red: #f02a2a;
-
+  --white-green: #eaffd2;
+  --light-green: #d5ffa4;
+  --dark-green: #2a5e00;
+  --black-green: #1b3a01;
 
   /*Typography */
   --h1: 7.594rem;
@@ -30,23 +27,21 @@ body,
 }
 
 .warm {
-  --primary: var(--light-red);
-  --secondary: var(--dark-red);
-  --primaryaccent: var(--light-yellow);
-  --secondaryaccent: var(--dark-yellow);
+  --primary: var(--light-green);
+  --secondary: var(--white-green);
+  --accent: var(--dark-green);
   /* --buttonBacc: var(--) */
 }
 
 .cool {
-  --primary: var(--light-yellow);
-  --secondary: var(--dark-yellow);
-  --primaryaccent: var(--light-red);
-  --secondaryaccent: var(--dark-red);
+  --primary: var(--dark-green);
+  --secondary: var(--black-green);
+  --accent: var(--light-green);
 }
 
 h1 {
   font-size: var(--h1);
-  color: var(--secondaryaccent);
+  color: var(--accent);
 }
 
 h2 {
@@ -74,28 +69,26 @@ h5 {
   background-color: transparent;
 }
 
-.yo {
-  color: white;
-  background-color: #00305e;
+.results {
+  background-color: var(--secondary);
   text-align: center;
   font-size: 25vh;
 }
 
 #cold {
-  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #a4d3ff;
-  color: black;
+  background-color: var(--primary);
+  color: var(--accent);
   height: 40vh;
   margin-top: 10rem;
 }
@@ -103,8 +96,8 @@ h5 {
 .tabs{
   text-align: center;
   height: 10rem;
-  background-color: #a4d3ff;
-  color:#00305e;
+  background-color: var(--primary);
+  color: var(--accent);
   font-size: var(--h1);
   display: flex;
   flex-direction: row;
@@ -115,6 +108,7 @@ h5 {
   border: none;
   padding: auto, 20vw;
   transition: all 0.25s;
+  background-color: var(--primary);
 }
 
 .home:hover,
@@ -182,13 +176,13 @@ h5 {
 }
 
 .flip-card-front {
-  background-color: #a7cee9;
-  color: #00305e;
+  background-color: var(--primary);
+  color: var(--accent);
 }
 
 .flip-card-back {
-  background-color: #a7cee9;
-  color:#00305e;
+  background-color: var(--primary);
+  color: var(--accent);
   justify-items: center;
   transform: rotateY(180deg);
 }
