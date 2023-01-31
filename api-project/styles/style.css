@@ -93,10 +93,10 @@ h5 {
   margin-top: 10rem;
 }
 
-.tabs{
+.tabs {
   text-align: center;
   height: 10rem;
-  background-color: var(--primary);
+  background-color: transparent;
   color: var(--accent);
   font-size: var(--h1);
   display: flex;
@@ -104,7 +104,11 @@ h5 {
   justify-content: space-around;
 }
 
-.home, .male, .female, .human, .alien{
+.home,
+.male,
+.female,
+.human,
+.alien {
   border: none;
   padding: auto, 20vw;
   transition: all 0.25s;
@@ -120,7 +124,7 @@ h5 {
   color: var(--white);
 }
 
-#picture{
+#picture {
   margin-top: 6rem;
   height: 40rem;
   display: inline-block;
@@ -135,7 +139,10 @@ h5 {
   }
 }
 
-#picture:hover, #picture:focus, #picture:active, #picture {
+#picture:hover,
+#picture:focus,
+#picture:active,
+#picture {
   animation-name: picture;
   animation-duration: 0.4s;
   animation-timing-function: linear;
@@ -152,7 +159,7 @@ h5 {
   margin: 2rem;
   height: 50rem;
   width: 40rem;
-  
+
 }
 
 .flip-card-inner {
@@ -168,7 +175,8 @@ h5 {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -183,7 +191,7 @@ h5 {
   justify-content: center;
 }
 
-#pic{
+#pic {
   margin: 3rem;
 }
 
@@ -198,37 +206,45 @@ h5 {
 }
 
 @media all and (max-width: 820px) {
+
   /* iPad Air*/
-  .flip-card{
+  .flip-card {
     width: 40vw;
   }
-  h1{
+
+  h1 {
     padding: 1rem;
     font-size: 6rem;
   }
-  .section{
-  height: 25rem;
- }
+
+  .section {
+    height: 25rem;
+  }
 }
 
 @media all and (max-width: 480px) {
+
   /* iPphone 12 Pro*/
-  .flip-card{
+  .flip-card {
     height: 60vh;
     width: 85vw;
   }
-  #picture{
+
+  #picture {
     height: 25vh;
   }
-  .tabs{
+
+  .tabs {
     font-size: 4rem;
     height: 8vh;
   }
-  h1{
+
+  h1 {
     padding: 1rem;
     font-size: 3rem;
   }
-  .section{
+
+  .section {
     height: 15rem;
   }
 
