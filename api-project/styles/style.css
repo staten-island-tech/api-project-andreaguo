@@ -96,7 +96,7 @@ h5 {
 .tabs {
   text-align: center;
   height: 10rem;
-  background-color: transparent;
+  background-color: var(--primary);
   color: var(--accent);
   font-size: var(--h1);
   display: flex;
