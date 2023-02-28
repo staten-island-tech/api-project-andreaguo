@@ -62,7 +62,7 @@ function cards(array){
         <div class="flip-card-inner">
         <div class="flip-card-front">
             <h3>${el.name}</h3>
-            <img id="pic" src=${el.image} alt="character image">
+            <img id="pic" src=${el.image} alt="${el.name}">
         </div>
         <div class="flip-card-back">
             <h3>${el.name}</h3>
