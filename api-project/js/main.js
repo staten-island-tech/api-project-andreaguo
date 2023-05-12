@@ -37,6 +37,7 @@ async function getData(URL){
             console.log(response.status);
             throw error(response);
         } else {
+            console.log(response)
             const data = await response.json();
             const array =  data.results;
             cards(array);
@@ -55,7 +56,6 @@ getData(URL);
 
 
 function cards(array){
-    console.log(array);
     array.forEach((el)=> document.getElementById("cold").insertAdjacentHTML(
         "afterbegin",
         `<div class="flip-card">
@@ -101,15 +101,16 @@ function buttonS(DOM, array, type){
 }
 
 function filterGender(array, type){
-    return array.filter((el)=> el.gender === `${type}`)
+    return array.filter((el)=> el.gender === type)
 }
 
 function filterSpecies(array, type){
-    return array.filter((el)=> el.species === `${type}`)
+    return array.filter((el)=> el.species === type
+    )
 }
 
 function remove(){
-    document.querySelectorAll(".flip-card").forEach((e)=> e.remove()); 
+    document.querySelectorAll(".flip-card").innerHTML = ""
 }
 
 document.getElementById("picture").addEventListener("click", function () {
